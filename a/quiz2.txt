@@ -1,0 +1,7 @@
+Elijah Morris
+Quiz 2 Text File 
+
+The first base case in the binsearch program is for when the start of the array gets to be more than the end, it's
+at this point that this let's the program know that the value wasn't found and it should return. The second base
+case is for when the middle value in the array becomes equal to the value being searched for and this let's the 
+program know that the value has been found and should return.

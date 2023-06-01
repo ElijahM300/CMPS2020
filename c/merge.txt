@@ -1,0 +1,7 @@
+Elijah Morris
+
+1. The merge sort algorithm was invented by John von Neumann in 1945.
+
+2. An advantage the merge sort algorithm seems to have over other sort alogorithms is that instead of trying to
+sort the data all at once in like bubble sort or selection sort, it instead divides the data in half, sorts those pieces of data,
+and then merges the data back together.

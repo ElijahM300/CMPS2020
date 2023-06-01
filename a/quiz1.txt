@@ -1,0 +1,9 @@
+Elijah Morris 
+Quiz 1 
+
+Question 1: If a recursive function never returns, this can result in the
+program running out of stack space and eventually it will stop running. It stopsrunning because you run out of stack space, the stack space fills up quickly dueto the program having an infinite loop and it never knows when to stop.
+
+Question 2: In a recursive function, the base case is what is usually checked
+first before the program continues which is why it's a problem that the 
+program can immediately solve.  

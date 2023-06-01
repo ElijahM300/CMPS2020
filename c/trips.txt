@@ -1,0 +1,8 @@
+Elijah Morris
+
+The base case I had before which checked to see if start >= end was wrong for this program since when
+my program was checking if there were any triples, it went outside of the array bounds when the start value was 
+set to the second to last element in the array. This base case wouldn't be able to make sure that the program 
+didn't go out of bounds of the array when checking for triples before it finished, so to fix this I replaced my base 
+case with when start + 1 == end since there's only two elements left in the array at that point and there wouldn't be 
+able to be anymore triples in the array.

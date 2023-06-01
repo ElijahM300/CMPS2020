@@ -1,0 +1,16 @@
+Elijah Morris
+Final Exam Warm-up
+
+1. int foo(int arr[], int s, int e){
+       if((e + 1) < 1)
+           return -1;
+       if((e + 1) == 1)
+           return (arr[s]*2);
+       else
+           return (arr[s] + arr[e]);     
+   }
+
+
+2. if(n) would be the base case since it checks to see if n is null which, if it is, the program stops 
+running and returns. It tells the program under which condition it should stop so that there isn't an infinite loop,
+this is what makes it a base case. 

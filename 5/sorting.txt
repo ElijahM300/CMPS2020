@@ -1,0 +1,30 @@
+Sorting Algorithms
+-------------------
+
+Bubble Sort:
+
+for(int i = 0; i < n - 1; i++){
+    for(int j = 0; j < n - 1; j++){
+        if(arr[j] > arr[j + 1]){
+            int tmp = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1] = tmp;
+        }   
+    }
+} 
+
+Binary Search:
+
+int start = 0;
+int end = n - 1;
+int mid;
+do{
+    mid = (start + end)/2;
+    if(arr[mid] == value)
+        return mid;
+    else if(arr[mid] < value)
+        start = mid + 1;
+    else
+        end = mid - 1;
+}while(start <= end);
+return -1;

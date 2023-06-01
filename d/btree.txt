@@ -1,0 +1,19 @@
+Elijah Morris
+
+1. The thing that initially determines the shape of a binary tree is how many children the root node has. If the root node 
+has only one child then the shape of the tree can be skewed to either the left or the right while if the root node has two
+children it will look more like a common binary tree.
+
+2. Another way that you could delete a node from a binary tree is by being able to choose what level you want to 
+delete a node on and then choosing to either delete that current node you're on or deleting the node that is to 
+the right or left, if there is any. You would have to keep track of what level the tree is currently on and then 
+deleting the node that the program is currently on which could potentially be a root node for a subtree or having 
+the option to point to the right node or left node and then deleting, based on user input.  
+
+3. This is true since when a new node is inserted into a tree, it becomes the child of a parent node and it would 
+point to null until a new node is added that could potentially become its child, therefore, a new node inserted
+into the tree must be a leaf node. 
+
+4. The tree would operate inefficiently since all of the values being added after the first one are all going 
+to the right of the root node instead of values dispering across the tree to the right or left. It would act more 
+like a linked list rather than a binary tree.  

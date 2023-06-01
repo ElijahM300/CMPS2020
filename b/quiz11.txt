@@ -1,0 +1,21 @@
+Elijah Morris
+Quiz 11
+4-3-20
+
+1. One part of a node is that it's a data structure. Another part of a node is that the nodew in a list are dynamically 
+allocated in memory.
+
+2. A list head is the beginning of the list, it can either be the first node in the list or point to the first node.
+
+3. If the last node in a list points to null then this signifies the end of the list.
+
+4. A self-referential data structure is when in a Node sturcture for example, it has a pointer to an object of the
+same type of the structure, which is Node.
+
+5. One advantage a linked list has over an array is that it's fairly easier to grow and shrink the list compared to
+an array.
+
+6. The first step is to be able to remove the node from the list without breaking the links created by the next pointers.
+The second step is the then delete the node from memory.
+
+7. You know a linked list is empty when it returns null for the first node.

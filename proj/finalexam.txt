@@ -1,0 +1,318 @@
+Elijah Morris
+
+CMPS-2020 Final Exam Spring 2020
+All code written should be perfect C++ code.
+
+Please put your name at the top of this file.
+
+Clearly indicate your answers to each question.
+
+
+
+Object Oriented
+---------------
+
+1. A class which dynamically allocates memory to its pointer data members...
+
+	A. will have all public members
+	--{B. needs a destructor}--
+	C. needs no copy constructor
+	D. should have an overloaded assignment operator
+
+=============================================================================
+
+2. Indicate the name of the base class in the following statement:
+
+	class Person : public --{Student}--
+
+=============================================================================
+
+3. Fill in the blank to give the correct return type to this function that
+   overloads an operator.
+
+    ____bool______ operator <= (const Number &v) { return (value <= v); }
+
+=============================================================================
+
+
+Linked Lists
+------------
+
+True or False
+
+4.  T  --{F}--  A programmer must know in advance how many nodes will be needed
+          in a linked list.
+
+=============================================================================
+5.  --{T}--  F  A circular linked list requires an additional element be added
+          to the Node structure.
+
+=============================================================================
+6.  T  --{F}--  The nodes of a linked list are stored in contiguous memory,
+          similar to an array.
+
+=============================================================================
+7.  T  --{F}--  When the head pointer points to null or nullptr, it signifies an
+          empty list.
+
+=============================================================================
+
+8.
+Write a function to add a node to a singly-linked list. Near the beginning of
+your program, the head node was declared like this:
+
+   Node *head = null_ptr;
+
+Assume a node structure similar to our lab and homework. The function you
+write will be a little different than our homework was. Look closely and
+write a perfect function.
+
+A call to your function looks like this: 
+
+   head = addNode(head, 35);
+
+---write your function here---
+
+void addNode(Node *node, int value){
+    if(node == head){
+        node = new Node;
+        node->data = value;
+    }
+    else{
+        node = new Node;
+        node->data = value;
+        node->next = head;
+        head = tmp;
+    }
+}
+
+
+=============================================================================
+
+Binary Search Trees
+-------------------
+
+You are going to insert some data values into a binary search tree.
+Your data values are the numbers 1 through 9. Your tree starts out empty.
+
+9. Show the order in which you would insert the data into the tree, that would
+   make the tree search function work inefficiently. Show the order now.
+ 
+                    1 2 3 4 5 6 7 8 9
+
+=============================================================================
+10. Now show an order of data insertion that will make your tree work
+    efficiently. There can be more than one correct answer to this question.
+    Show your order now.
+
+                    5 2 1 3 4 8 6 7 9
+
+=============================================================================
+
+    You should draw out your tree.
+    It may help you with the next set of questions.
+    You may draw your tree using characters something like this:
+
+          x
+         / \
+        x   x
+       / \
+      x   x
+
+
+
+
+
+11. Now answer the following questions for the tree you constructed above. 
+
+	a. How many levels does your tree have?  __4__ 
+
+=============================================================================
+	b. How many nodes have exactly one child?  __2__ 
+
+=============================================================================
+	c. List the nodes using pre-order traversal: 5 2 1 4 3 8 6 7 9
+
+=============================================================================
+	d. List the nodes using in-order traversal: 1 2 3 4 5 6 7 8 9 
+
+=============================================================================
+	e. List the nodes using post-order traversal: 4 1 3 2 7 6 9 8 5
+
+=============================================================================
+
+Hash Tables
+-----------
+
+12. How do you calculate a hash table's load factor?
+
+load factor = n/size or the number of elements in the hash table divided by
+the size of the hash table.
+
+
+=============================================================================
+13. Why do you need to know a hash table’s load factor?
+
+So that you can have a hash table run efficiently by avoiding collisions
+and making sure the table isn't using up a lot of memory.
+
+=============================================================================
+14. What is the job of a hash function?
+
+A hash function is used to put data elements in their proper place in a 
+hash table by getting a data element and performing a mathematical operation
+on it to get it's place in the table. 
+
+=============================================================================
+15. An empty hash table is below with size 7 and hash function:
+      hash(x) = (3x + 4) mod 7.
+
+    note: x is your data value.
+	
+	a. Write the C++ code for your hash function here:
+
+    int hash(int value){
+        int z = 3(value) + 4
+        return (z % 7);
+    }
+
+
+
+
+
+=============================================================================
+
+    b. Insert the following keys into the hash table, in this order:
+
+       3, 4, 7, 11, 8, 10
+
+    Linear probing is used to resolve collisions.
+    Do not resize the table.
+
+    +-------+-------+-------+-------+-------+-------+-------+
+    |  8    | 10    |  4    | 11    |  7    |       |  3    |
+    +-------+-------+-------+-------+-------+-------+-------+
+        0       1       2       3       4       5       6  
+
+
+=============================================================================
+
+
+Big O Analysis
+--------------
+
+16. What is the Big-O efficiency of the following function?
+
+    int find_sum(int *arr, int n) {
+        int sum = 0;
+        for (int i=0; i<n; i++)
+            for (int j=0; j<n; j++)
+                sum = sum + arr[i] + arr[j];
+        return sum;	
+    }
+
+    Write your answer here: _____n^2_______
+
+
+=============================================================================
+17. Reduce the following expression asymptotically and show using Big-O notation.
+
+	n/2 + log n + 10n	___________O(log n)________________   
+
+
+=============================================================================
+18. Name two algorithms we learned that use a divide-and-conquer strategy.
+
+    _________merge sort_______________	__________quick sort______________
+
+=============================================================================
+
+
+General
+-------
+
+19. Below is a function to allocate memory to a pointer that is passed in as
+   an argument.
+
+       void get_memory(int *ptr, int size)
+       {
+           ptr = new int[size];
+       }
+
+   This function will compile and run, but it will not operate correctly.
+
+   a. Explain what is wrong with this function.
+
+   The function uses an int called size to specify how much memory should be
+   allocated, however, it should be made a const since the size variable
+   could be accidentally changed and cause memory errors in the program. 
+
+=============================================================================
+
+   b. Show one way to correct the function.
+
+   void get_memory(int *ptr, const int SIZE)
+   {
+       ptr = new int[SIZE];
+   }
+
+
+=============================================================================
+
+20. Write a boolean expression that will evaluate to true if
+   a variable named x is greater than 4 but not greater than 24.
+
+   x > 4 && x < 24
+
+
+=============================================================================
+
+21. Remove element from ordered array.
+    The ordered array below is in your program. Write code that will remove
+    data value 8 from the array, by shifting array elements starting at value
+    9 to the left, using a for-loop. Only a few lines of code are needed.
+    Remember to maintain the integrity of your list and your program.
+
+       int arr[] = {2, 4, 6, 8, 9, 10, 12, 13, 15, 16, 21, 28};
+	   int n = 12;
+
+    Write your code here...
+
+    for(int i = 4; i < n; i++){
+        arr[i - 1] = arr[i];          
+    }
+    n = n - 1;
+
+
+
+
+
+=============================================================================
+
+22. Complete the code below to initialize num with a random value that falls
+    within the range -5 to 5. (One line of code only.)
+
+       int num = (rand()%11) + (-5);
+
+
+
+=============================================================================
+
+23. What is the output of the following code segment?
+    For extra credit, do this without writing a program,
+    and briefly explain what each line of code does.
+
+	char a[] = "Sum of errors!";
+	a[3] = a[2];
+	a[4] = a[7];
+	a[5] = a[8];
+	a[6] = a[strlen(a)];
+	cout << a;
+
+    output: Summer
+    
+=============================================================================
+
+---end of exam---
+
+

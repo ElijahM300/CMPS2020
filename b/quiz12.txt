@@ -1,0 +1,20 @@
+Elijah  Morris
+Quiz 12
+
+13. The head points to the first node in a linked list.
+
+14. A data structure that points to an object of the same type as itself is known as a self-referential 
+data structure.
+
+15. After creating a linked list's head pointer, you should make sure it points to null before using it in
+any operations.
+
+16. Appending a node means adding it to the end of a list.
+
+17. Inserting a node means adding it to a list, but not necessarily to the end.
+
+18. Traversing a list means traveling through the list.
+
+19. In a circularly linked list, the last node has a pointer to the first node.
+
+20. In a doubly linked list, each node has a pointer to the one before it and the one after it.
